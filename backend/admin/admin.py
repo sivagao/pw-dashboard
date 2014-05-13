@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+
 from django.contrib import admin
 from .models import *
 from .utils import *
@@ -12,6 +14,7 @@ class TaskAdmin(admin.ModelAdmin):
         # return "".join([ '<img src="http://who.wandoulabs.com/static/img/%s.jpg" style="width: 80px;margin: 0 5px;">' % i.strip() for i in obj.assignee.split(',') ])
 
     admin_assignee_avatars.allow_tags = True
+    admin_assignee_avatars.short_description = u'从who.wandoulabs去头像'
 
 class TeamAdmin(admin.ModelAdmin):
     list_display = ('name', 'progress','modified')

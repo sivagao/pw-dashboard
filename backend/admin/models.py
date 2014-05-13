@@ -22,4 +22,4 @@ class Team(models.Model):
     modified = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
-        return '%s, is $d' % (self.name, self.progress)
+        return '%s, is %d' % (self.name, self.progress)
