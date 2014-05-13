@@ -4,6 +4,8 @@ Wandoulabs Polish Week dashboard which is located office front's Tv
 ### Screencast
 ![Road](./screencast/designv1-road.png)
 ![Tasks](./screencast/designv1-task.png)
+![admin-task-list](./screencast/adminv1-task-list.png)
+![admin-task-add](./screencast/adminv1-task-add.png)
 
 ### Data Layer
 
