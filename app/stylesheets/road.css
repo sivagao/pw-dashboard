@@ -1,0 +1,308 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+    background: #362c53;
+}
+
+.stars,
+#meteor,
+#planet-top,
+#planet-center,
+#planet-bottom,
+#planet-left,
+#planet-right,
+#bridge,
+.ufo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+/*星星*/
+.star-1 {
+    width: 15px;
+    height: 15px;
+    margin: -300px 0 0 -160px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #fed486;
+    background: #fed486;
+}
+
+.star-2 {
+    width: 10px;
+    height: 10px;
+    margin: -200px 0 0 -220px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #ff7977;
+    background: #ff7977;
+}
+
+.star-3 {
+    width: 20px;
+    height: 20px;
+    margin: 10px 0 0 -40px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #1ad5c8;
+    background: #1ad5c8;
+}
+
+.star-4 {
+    width: 15px;
+    height: 15px;
+    margin: 280px 0 0 -120px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #fed486;
+    background: #fed486;
+}
+
+.star-5 {
+    width: 17px;
+    height: 17px;
+    margin: 300px 0 0 480px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #ffa284;
+    background: #ffa284;
+}
+
+.star-6 {
+    width: 22px;
+    height: 22px;
+    margin: 290px 0 0 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #ff227b;
+    background: #ff227b;
+}
+
+.star-7 {
+    width: 11px;
+    height: 11px;
+    margin: 360px 0 0 240px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #ffa284;
+    background: #ffa284;
+}
+
+.star-8 {
+    width: 26px;
+    height: 26px;
+    margin: 320px 0 0 -320px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #736b99;
+    background: #736b99;
+}
+
+
+/*流星*/
+#meteor {
+    width: 261px;
+    height: 205px;
+    margin: -380px 0 0 180px;
+    background: url(../images/meteor.png) center center no-repeat;
+}
+
+/*星球*/
+#planet-top {
+    width: 288px;
+    height: 157px;
+    margin: -380px 0 0 -180px;
+    background: url(../images/planet-top.png) center center no-repeat;
+}
+
+#planet-center {
+    width: 196px;
+    height: 196px;
+    margin: -60px 0 0 -10px;
+    background: url(../images/planet-center.png) center center no-repeat;
+}
+
+#planet-bottom {
+    width: 284px;
+    height: 216px;
+    margin: 240px 0 0 -700px;
+    background: url(../images/planet-bottom.png) center center no-repeat;
+}
+
+#planet-left {
+    width: 928px;
+    height: 928px;
+    margin: -720px 0 0 -1100px;
+    background: url(../images/planet-left.png) center center no-repeat;
+}
+
+#planet-right {
+    width: 568px;
+    height: 568px;
+    margin: -280px 0 0 350px;
+    background: url(../images/planet-right.png) center center no-repeat;
+}
+
+
+/*通道*/
+#bridge {
+    width: 1071px;
+    height: 518px;
+    margin: -159px 0 0 -536px;
+    background: url(../images/bridge.png) center center no-repeat;
+}
+
+
+.ufo {
+    width: 184px;
+    height: 243px;
+    margin: -280px 0 0 -680px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    -webkit-transform: translate(0, 0);
+}
+
+
+.ufo-1 {
+    background-image: url(../images/UFO-1.png);
+}
+
+.ufo-2 {
+    background-image: url(../images/UFO-2.png);
+}
+
+.ufo-3 {
+    background-image: url(../images/UFO-3.png);
+}
+
+.ufo-4 {
+    background-image: url(../images/UFO-4.png);
+}
+
+.ufo-5 {
+    background-image: url(../images/UFO-5.png);
+}
+
+.step-1 {
+    -webkit-transform: translate(117px, 85px);
+}
+
+.step-2 {
+    -webkit-transform: translate(184px, 130px);
+}
+
+.step-3 {
+    -webkit-transform: translate(254px, 175px);
+}
+
+.step-4 {
+    -webkit-transform: translate(321px, 219px);
+}
+
+.step-5 {
+    -webkit-transform: translate(389px, 262px);
+    z-index: 5;
+}
+
+/**/
+.step-6 {
+    -webkit-transform: translate(453px, 217px);
+    z-index: 4;
+}
+
+.step-7 {
+    -webkit-transform: translate(520px, 175px);
+    z-index: 3;
+}
+
+.step-8 {
+    -webkit-transform: translate(453px, 132px);
+    z-index: 2;
+}
+
+.step-9 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-10 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-11 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-12 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-13 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-14 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-15 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-15 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-17 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-18 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-19 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-20 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-21 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-22 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-23 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-24 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+.step-25 {
+    -webkit-transform: translate(184px, 132px);
+}
+
+@-webkit-keyframes floating {
+    from {
+        -webkit-transform:translate(0, 0);
+    }
+
+    65% {
+        -webkit-transform:translate(0, 15px);
+    }
+
+    to {
+        -webkit-transform: translate(0, 0px);
+    }
+}
