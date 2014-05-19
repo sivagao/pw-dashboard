@@ -1,0 +1,491 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+     background: #362c53 url(../images/bg-progressbar.jpg) center center no-repeat;
+    background-size: cover;
+    font: 14px /1.8 "Roboto", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.stars,
+#meteor,
+#planet-top,
+#planet-center,
+#planet-bottom,
+#planet-left,
+#planet-right,
+#bridge,
+.ufo,
+.steps {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+/*星星*/
+.star-1 {
+    width: 15px;
+    height: 15px;
+    margin: -300px 0 0 -160px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #fed486;
+    background: #fed486;
+}
+
+.star-2 {
+    width: 10px;
+    height: 10px;
+    margin: -200px 0 0 -220px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #ff7977;
+    background: #ff7977;
+}
+
+.star-3 {
+    width: 20px;
+    height: 20px;
+    margin: 10px 0 0 -40px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #1ad5c8;
+    background: #1ad5c8;
+}
+
+.star-4 {
+    width: 15px;
+    height: 15px;
+    margin: 280px 0 0 -120px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #fed486;
+    background: #fed486;
+}
+
+.star-5 {
+    width: 17px;
+    height: 17px;
+    margin: 300px 0 0 480px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #ffa284;
+    background: #ffa284;
+}
+
+.star-6 {
+    width: 22px;
+    height: 22px;
+    margin: 290px 0 0 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #ff227b;
+    background: #ff227b;
+}
+
+.star-7 {
+    width: 11px;
+    height: 11px;
+    margin: 360px 0 0 240px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #ffa284;
+    background: #ffa284;
+}
+
+.star-8 {
+    width: 26px;
+    height: 26px;
+    margin: 320px 0 0 -320px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #736b99;
+    background: #736b99;
+}
+
+
+/*流星*/
+#meteor {
+    width: 261px;
+    height: 205px;
+    /*margin: -380px 0 0 180px;*/
+    margin: 0;
+    top: -205px;
+    right: -261px;
+    left: auto;
+    background: url(../images/meteor.png) center center no-repeat;
+    -webkit-transform: translate(0, 0);
+}
+
+#meteor.fly {
+    -webkit-animation: meteor-fly 5s infinite ease-in-out;
+    animation: meteor-fly 5s infinite ease-in-out
+}
+
+
+/*星球*/
+#planet-top {
+    width: 288px;
+    height: 157px;
+    margin: -380px 0 0 -180px;
+    background: url(../images/planet-top.png) center center no-repeat;
+}
+
+#planet-center {
+    width: 196px;
+    height: 196px;
+    margin: -60px 0 0 -10px;
+    background: url(../images/planet-center.png) center center no-repeat;
+}
+
+#planet-bottom {
+    width: 284px;
+    height: 216px;
+    margin: 240px 0 0 -700px;
+    background: url(../images/planet-bottom.png) center center no-repeat;
+}
+
+#planet-left {
+    width: 928px;
+    height: 928px;
+    margin: -720px 0 0 -1100px;
+    background: url(../images/planet-left.png) center center no-repeat;
+}
+
+#planet-right {
+    width: 568px;
+    height: 568px;
+    margin: -280px 0 0 350px;
+    background: url(../images/planet-right.png) center center no-repeat;
+}
+
+
+/*通道*/
+#bridge {
+    width: 1071px;
+    height: 518px;
+    margin: -159px 0 0 -536px;
+    background: url(../images/bridge.png) center center no-repeat;
+}
+
+
+.ufo {
+    position: relative;
+    width: 184px;
+    height: 243px;
+    margin: -280px 0 0 -680px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    -webkit-transform: translate(0, -5px);
+}
+
+.ufo h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.ufo span {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+    background: #fff;
+    border-radius: 10px;
+    color: #333;
+    box-shadow: 0 0 4px rgba(0,0,0, 0.4);
+}
+
+.ufo span:before,
+.ufo span:after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 22px;
+    background: #fff;
+}
+
+.ufo span:before {
+    left: 10px;
+    top: 100%;
+    -webkit-transform: rotate(-30deg);
+    -webkit-transform-origin: left top;
+}
+
+.ufo span:after {
+    right: 10px;
+    top: 100%;
+    -webkit-transform: rotate(30deg);
+    -webkit-transform-origin: right top;
+}
+
+.steps {
+    -webkit-transform: translate(0, 0);
+    -webkit-transition: -webkit-transform 1s;
+}
+
+
+.ufo-1 {
+    background-image: url(../images/UFO-1.png);
+    -webkit-animation: floating 2s .1s infinite ease-in-out;
+    animation: floating 2s .1s infinite ease-in-out
+}
+
+.ufo-2 {
+    background-image: url(../images/UFO-2.png);
+    -webkit-animation: floating 2s .3s infinite ease-in-out;
+    animation: floating 2s .2s infinite ease-in-out
+}
+
+.ufo-3 {
+    background-image: url(../images/UFO-3.png);
+    -webkit-animation: floating 2s .5s infinite ease-in-out;
+    animation: floating 2s .3s infinite ease-in-out
+}
+
+.ufo-4 {
+    background-image: url(../images/UFO-4.png);
+    -webkit-animation: floating 2s .8s infinite ease-in-out;
+    animation: floating 2s .4s infinite ease-in-out
+}
+
+.ufo-5 {
+    background-image: url(../images/UFO-5.png);
+    -webkit-animation: floating 2s 1.2s infinite ease-in-out;
+    animation: floating 2s .5s infinite ease-in-out
+}
+
+.step-0 {
+    display: none;
+}
+
+.step-1 {
+    -webkit-transform: translate(117px, 85px);
+    z-index: 3;
+}
+
+.step-2 {
+    -webkit-transform: translate(184px, 130px);
+    z-index: 4;
+}
+
+.step-3 {
+    -webkit-transform: translate(254px, 175px);
+    z-index: 5;
+}
+
+.step-4 {
+    -webkit-transform: translate(321px, 219px);
+    z-index: 6;
+}
+
+.step-5 {
+    -webkit-transform: translate(389px, 262px);
+    z-index: 7;
+}
+
+/**/
+.step-6 {
+    -webkit-transform: translate(453px, 217px);
+    z-index: 6;
+}
+
+.step-7 {
+    -webkit-transform: translate(520px, 175px);
+    z-index: 5;
+}
+
+.step-8 {
+    -webkit-transform: translate(453px, 132px);
+    z-index: 4;
+}
+
+.step-9 {
+    -webkit-transform: translate(386px, 87px);
+    z-index: 3;
+}
+
+.step-10 {
+    -webkit-transform: translate(454px, 42px);
+    z-index: 2;
+}
+
+.step-11 {
+    -webkit-transform: translate(520px, 0px);
+    z-index: 1;
+}
+
+.step-12 {
+    -webkit-transform: translate(590px, -42px);
+    z-index: 0;
+}
+
+.step-13 {
+    -webkit-transform: translate(654px, 0px);
+    z-index: 1;
+}
+
+.step-14 {
+    -webkit-transform: translate(720px, 42px);
+    z-index: 2;
+}
+
+.step-15 {
+    -webkit-transform: translate(789px, 86px);
+    z-index: 3;
+}
+
+.step-16 {
+    -webkit-transform: translate(856px, 129px);
+    z-index: 4;
+}
+
+.step-17 {
+    -webkit-transform: translate(789px, 174px);
+    z-index: 5;
+}
+
+.step-18 {
+    -webkit-transform: translate(720px, 218px);
+    z-index: 6;
+}
+
+.step-19 {
+    -webkit-transform: translate(654px, 261px);
+    z-index: 7;
+}
+
+.step-20 {
+    -webkit-transform: translate(720px, 304px);
+    z-index: 8;
+}
+
+.step-21 {
+    -webkit-transform: translate(789px, 347px);
+    z-index: 9;
+}
+
+.step-22 {
+    -webkit-transform: translate(856px, 306px);
+    z-index: 8;
+}
+
+.step-23 {
+    -webkit-transform: translate(923px, 261px);
+    z-index: 7;
+}
+
+.step-24 {
+    -webkit-transform: translate(990px, 218px);
+    z-index: 6;
+}
+
+.step-25 {
+    -webkit-transform: translate(1056px, 174px);
+    z-index: 5;
+}
+
+
+/* =============
+ progress page
+============= */
+#progress {
+    width: 100%;
+    height: 100%;
+}
+
+#progress .planet{
+    margin: 0;
+    left: auto;
+    top: auto;
+}
+
+#progress #planet-top {
+    left: 40%;
+    bottom: -70px;
+}
+
+#progress #planet-center {
+    right: 5%;
+    top: 10%;
+}
+
+#progress #planet-bottom {
+    left: -100px;
+    bottom: 20%;
+}
+
+#progress #planet-left {
+    left: -500px;
+    top: -500px;
+}
+
+#progress #planet-right {
+    right: -300px;
+    bottom: -200px;
+}
+
+
+#progress-cont {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    bottom: 100px;
+    left: 100px;
+
+    background: #0c0;
+}
+
+#progress #header {
+    text-align: center;
+    color: #fff;
+}
+
+#progress .title {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: 'Roboto';
+}
+
+#progress .tasks {
+    display: inline-block;
+    font-size: 50px;
+    font-weight: 100;
+    color: #fff;
+    font-family: 'Roboto';
+}
+
+
+@-webkit-keyframes floating {
+    from {
+        -webkit-transform: translate(0, -5px);
+    }
+
+    65% {
+        -webkit-transform: translate(0, 5px);
+    }
+
+    to {
+        -webkit-transform: translate(0, -5px);
+    }
+}
+
+@-webkit-keyframes meteor-fly {
+    from {
+        -webkit-transform: translate(0, 0);
+    }
+
+    to {
+        -webkit-transform: translate(-2500px, 1500px);
+    }
+}
