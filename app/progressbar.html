@@ -3,87 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Progressbar - Polish Week @wandoulabs</title>
-    <style type="text/css">
-        body{
-            background-image: url(images/bg-progressbar.jpg);
-            height: 100%;
-            width: 100%;
-            background-size: cover;
-        }
-        .title{
-            position: absolute;
-            font-size: 50px;
-            color: #FFF;
-            left: 200px;
-            top: 80px;
-        }
-        .progress-wrapper{
-            position: absolute;
-            bottom: 50px;
-            left: 75px;
-        }
-        .progress{
-
-        }
-        .progress-bar{
-            height: 70px;
-            width: 700px;
-            border-radius: 30px;
-            background-color: #91ffe2;
-
-            display: inline-block;
-            margin-bottom: 15px;
-            margin-right: 20px;
-        }
-        .progress-avatars{
-            display: inline-block;
-        }
-        .progress-avatar{
-            height: 110px;
-            width: 120px;
-
-            display: inline-block;
-
-            background-image: url(images/UFO-2.png);
-            background-size: cover;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="stylesheets/app.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Special+Elite|Roboto:100,300,400,500,700,900">
 </head>
 <body>
-    <div class="title">Polish Week Task: Mission Completed</div>
-    <div class="progress-wrapper">
-        <div class="progress">
-            <div class="progress-bar"></div>
-            <div class="progress-avatars">
-                <div class="progress-avatar"></div>
-                <div class="progress-avatar"></div>
-                <div class="progress-avatar"></div>
-            </div>
-        </div>
-        <div class="progress">
-            <div class="progress-bar"></div>
-            <div class="progress-avatars">
-                <div class="progress-avatar"></div>
-                <div class="progress-avatar"></div>
-                <div class="progress-avatar"></div>
-            </div>
-        </div>
-        <div class="progress">
-            <div class="progress-bar"></div>
-            <div class="progress-avatars">
-                <div class="progress-avatar"></div>
-                <div class="progress-avatar"></div>
-                <div class="progress-avatar"></div>
-            </div>
-        </div>
-        <div class="progress">
-            <div class="progress-bar"></div>
-            <div class="progress-avatars">
-                <div class="progress-avatar"></div>
-                <div class="progress-avatar"></div>
-                <div class="progress-avatar"></div>
-            </div>
-        </div>
+    <div id="progress">
+        <div class="planet" id="planet-top"></div>
+        <div class="planet" id="planet-center"></div>
+        <div class="planet" id="planet-bottom"></div>
+        <div class="planet" id="planet-left"></div>
+        <div class="planet" id="planet-right"></div>
+
+        <div id="progress-cont"></div>
+
     </div>
+
+
+    <script type="text/template" id="task-list-tpl">
+        <div id="header">
+            <div class="title">Polish Week - Mission Completed</div>
+            <div class="tasks"><%= finished %> / <%= total %></div>
+        </div>
+        <ol id="task-list">
+        <% _.each(tasks, function(task) { %>
+            <li>
+                <div class="task-title">
+                    <span><%= task.name %><span>
+                </div>
+                <ul>
+                <% _.each(task.members, function(member) { %>
+                    <li>
+                        <h4 class="member-name"><%= member.name %></h4>
+                        <div class="avatar-wrap">
+                            <span class="avatar" style="background-image:url(<%= member.avatar %>)"></span>
+                        </div>
+                    </li>
+                <% }); %>
+                </ul>
+            </li>
+        <% }); %>
+        </ol>
+    </script>
+
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/underscore-min.js"></script>
+    <script src="javascripts/progress.js"></script>
 </body>
 </html>
