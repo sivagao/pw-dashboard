@@ -13,7 +13,7 @@ body {
 body {
     position: relative;
     overflow: hidden;
-     background: #362c53 url(../images/bg-progressbar.jpg) center center no-repeat;
+    background: #362c53 url(../images/bg-progressbar.jpg) center center no-repeat;
     background-size: cover;
     font: 14px /1.8 "Roboto", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -441,7 +441,7 @@ body {
     bottom: 100px;
     left: 100px;
 
-    background: #0c0;
+    /*background: #0c0;*/
 }
 
 #progress #header {
