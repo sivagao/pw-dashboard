@@ -6,6 +6,7 @@ from .utils import *
 
 class TaskAdmin(admin.ModelAdmin):
     list_display = ('name', 'assignee', 'finished', 'finishedTime', 'admin_assignee_avatars')
+    list_editable = ('finished',)
 
     """ List extensions """
     def admin_assignee_avatars(self, obj):
@@ -18,6 +19,7 @@ class TaskAdmin(admin.ModelAdmin):
 
 class TeamAdmin(admin.ModelAdmin):
     list_display = ('name', 'progress','modified')
+    list_editable = ('progress',)
 
 admin.site.register(Task, TaskAdmin)
 admin.site.register(Team, TeamAdmin)
