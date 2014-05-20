@@ -4,7 +4,7 @@
 * @Author: hanjiyun
 * @Date:   2014-05-20 13:09:33
 * @Last Modified by:   hanjiyun
-* @Last Modified time: 2014-05-20 18:36:32
+* @Last Modified time: 2014-05-20 18:43:15
 */
 
 
@@ -22,24 +22,20 @@ $(function () {
             dataType: 'json',
             url: 'http://192.168.108.178:9000/tasks/',
             success: function (res) {
-                // console.log(res);
                 if (res.data.length <=  num) {
-                    // console.log('小于或等于5');
                     res.size = res.data.length;
                     taskList.html(initTaskList(res));
                 } else {
-                    // console.log('大于5');
                     var size = res.data.length;
                     res.data = _.last(res.data, 5);
                     res.size = size;
-                    // console.log('res.data', res);
                     taskList.html(initTaskList(res));
                 }
 
 
-                // setTimeout(function () {
-                //     getNewData();
-                // }, 5000);
+                setTimeout(function () {
+                    getNewData();
+                }, 5000);
             },
             error: function (error) {
                 taskList.append('<div class="error-message">出错了 (>_<) </div>');
@@ -62,8 +58,6 @@ $(function () {
                 };
             }
         }
-
-        // console.log('new res', res);
 
         return (taskTpl({num: num, total: res.total, finished: res.size, tasks: res.data}));
     }
