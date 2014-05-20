@@ -33,7 +33,8 @@ TIME_ZONE = 'Asia/Chongqing'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-CN'
 
 SITE_ID = 1
 
@@ -116,8 +117,9 @@ TEMPLATE_DIRS = (
 
 INSTALLED_APPS = (
 
-    'django_admin_bootstrapped.bootstrap3',
-    'django_admin_bootstrapped',
+    # 'django_admin_bootstrapped.bootstrap3',
+    # 'django_admin_bootstrapped',
+    'suit',
 
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -137,12 +139,18 @@ INSTALLED_APPS = (
 
 REST_FRAMEWORK = {
     # 'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
-    'PAGINATE_BY': 10,
+    'PAGINATE_BY': 200,
     'DEFAULT_PERMISSION_CLASSES': (
        'rest_framework.permissions.AllowAny',
     )
 }
 CORS_ORIGIN_ALLOW_ALL = True
+
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
+
+TEMPLATE_CONTEXT_PROCESSORS = TCP + (
+    'django.core.context_processors.request',
+)
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

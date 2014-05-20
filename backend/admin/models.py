@@ -2,6 +2,10 @@
 
 from django.db import models
 
+class FinishedTaskManager(models.Manager):
+    def get_queryset(self):
+        return super(FinishedTaskManager, self).get_queryset().filter(finished=True)
+
 # Create your models here.
 class Task(models.Model):
     name = models.CharField(max_length=255, help_text=u'Polish Weeek 任务名称', verbose_name=u'任务名称')
@@ -10,6 +14,12 @@ class Task(models.Model):
 
     created = models.DateTimeField(auto_now_add=True)
     finishedTime = models.DateTimeField(auto_now=True)
+
+
+    object = models.Manager()
+    # objects = FinishedTaskManager()
+    # allTask = models.Manager() # The default manager.
+    finishedTask = FinishedTaskManager()
 
     def __unicode__(self):
         return self.name
