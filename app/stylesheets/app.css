@@ -263,6 +263,20 @@ body {
     animation: floating 2s .5s infinite ease-in-out
 }
 
+.error-message {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+
+.floating {
+    -webkit-animation: floating 2s 1.2s infinite ease-in-out;
+    animation: floating 2s .5s infinite ease-in-out
+}
+
 .step-0 {
     display: none;
 }
@@ -436,7 +450,7 @@ body {
 
 #progress-cont {
     position: absolute;
-    top: 100px;
+    top: 0;
     right: 100px;
     bottom: 100px;
     left: 100px;
@@ -445,11 +459,12 @@ body {
 }
 
 #progress #header {
+    padding: 20px 0 100px 0;
     text-align: center;
     color: #fff;
 }
 
-#progress .title {
+#progress #header .title {
     display: inline-block;
     margin-right: 30px;
     font-size: 50px;
@@ -457,12 +472,114 @@ body {
     font-family: 'Roboto';
 }
 
-#progress .tasks {
+#progress #header .tasks {
     display: inline-block;
     font-size: 50px;
     font-weight: 100;
     color: #fff;
     font-family: 'Roboto';
+}
+
+#task-list {
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+#task-list > li {
+    height: 160px;
+}
+
+#task-list > li > .task-title{
+    float: left;
+    display: table;
+    width: 740px;
+    height: 82px;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 30px;
+    background: #41436d;
+    font-size: 16px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+#task-list > li > .task-title span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#task-list > li:nth-child(1) > .task-title {
+    border: 5px solid #ff217b;
+    box-shadow: 0 0 10px 2px rgba(255, 33, 123, 0.7);
+}
+
+/*#task-list > li:nth-child(1) */
+
+#task-list > li:nth-child(2) > .task-title {
+    border: 5px solid #ffd687;
+    box-shadow: 0 0 10px 2px rgba(255, 214, 135, 0.7);
+}
+
+#task-list > li:nth-child(3) > .task-title {
+    border: 5px solid #e7ffab;
+    box-shadow: 0 0 10px 2px rgba(231, 255, 171, 0.7);
+}
+
+#task-list > li:nth-child(4) > .task-title {
+    border: 5px solid #63ffc3;
+    box-shadow: 0 0 10px 2px rgba(99, 255, 195, 0.7);
+}
+
+#task-list > li:nth-child(5) > .task-title {
+    border: 5px solid #bd8fbf;
+    box-shadow: 0 0 10px 2px rgba(189, 143, 191, 0.7);
+}
+
+#task-list > li > ul {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#task-list > li > ul > li {
+    position: relative;
+    display: inline-block;
+    width: 128px;
+    height: 103px;
+    background: url(../images/UFO-mask.png) center bottom no-repeat;
+    vertical-align: top;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+.member-name {
+    position: absolute;
+    left: 0;
+    bottom: -14px;
+    width: 100%;
+    font-weight: 300;
+    font-family: 'Roboto';
+}
+
+.avatar-wrap {
+    display: inline-block;
+    position: absolute;
+    top: -14px;
+    left: 25px;
+    width: 76px;
+    height: 78px;
+    overflow: hidden;
+    border-radius: 35px 35px 17px 17px;
+    box-shadow: 0 -5px 5px rgba(255, 255, 255, .3), 5px 0 5px rgba(255, 255, 255, .3), 0 0 0 rgba(255, 255, 255, 0), -5px 0 5px rgba(255, 255, 255, .3);
+}
+
+.avatar {
+    display: inline-block;
+    width: 76px;
+    height: 100px;
+    background: center center no-repeat;
+    background-size: cover;
 }
 
 

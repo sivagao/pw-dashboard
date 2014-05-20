@@ -4,11 +4,10 @@
 * @Author: hanjiyun
 * @Date:   2014-05-19 13:16:35
 * @Last Modified by:   hanjiyun
-* @Last Modified time: 2014-05-19 14:44:11
+* @Last Modified time: 2014-05-20 17:18:59
 */
 
 $(function () {
-    console.log(1);
 
     var ufoList = $('.ufo');
     var testNum;
@@ -32,7 +31,11 @@ $(function () {
                 setTimeout(function () {
                     getNewData();
                     console.log('重新请求');
-                }, 1000);
+                }, 5000);
+            },
+            error: function (error) {
+                $('.steps').hide();
+                $('body').append('<div class="error-message">出错了 (>_<) </div>');
             }
         });
     }
