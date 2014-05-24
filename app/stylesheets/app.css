@@ -1,23 +1,31 @@
+@charset "UTF-8";
+/* replace webikt vendor prefix to @include
+-webkit-(.*)?:\s(.*?); -> @include \1(\2);
+*/
+/* line 19, ../sass/app.scss */
 * {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
+/* line 25, ../sass/app.scss */
 html,
 body {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
+/* line 31, ../sass/app.scss */
 body {
-    position: relative;
-    overflow: hidden;
-    background: #362c53 url(../images/bg-progressbar.jpg) center center no-repeat;
-    background-size: cover;
-    font: 14px /1.8 "Roboto", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  background: #362c53 url(../images/bg-progressbar.jpg) center center no-repeat;
+  background-size: cover;
+  font: 14px /1.8 "Roboto", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/* line 39, ../sass/app.scss */
 .stars,
 #meteor,
 #planet-top,
@@ -28,581 +36,868 @@ body {
 #bridge,
 .ufo,
 .steps {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 /*星星*/
+/* line 55, ../sass/app.scss */
 .star-1 {
-    width: 15px;
-    height: 15px;
-    margin: -300px 0 0 -160px;
-    border-radius: 50%;
-    box-shadow: 0 0 30px #fed486;
-    background: #fed486;
+  width: 15px;
+  height: 15px;
+  margin: -300px 0 0 -160px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #fed486;
+  background: #fed486;
 }
 
+/* line 64, ../sass/app.scss */
 .star-2 {
-    width: 10px;
-    height: 10px;
-    margin: -200px 0 0 -220px;
-    border-radius: 50%;
-    box-shadow: 0 0 30px #ff7977;
-    background: #ff7977;
+  width: 10px;
+  height: 10px;
+  margin: -200px 0 0 -220px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #ff7977;
+  background: #ff7977;
 }
 
+/* line 73, ../sass/app.scss */
 .star-3 {
-    width: 20px;
-    height: 20px;
-    margin: 10px 0 0 -40px;
-    border-radius: 50%;
-    box-shadow: 0 0 30px #1ad5c8;
-    background: #1ad5c8;
+  width: 20px;
+  height: 20px;
+  margin: 10px 0 0 -40px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #1ad5c8;
+  background: #1ad5c8;
 }
 
+/* line 82, ../sass/app.scss */
 .star-4 {
-    width: 15px;
-    height: 15px;
-    margin: 280px 0 0 -120px;
-    border-radius: 50%;
-    box-shadow: 0 0 30px #fed486;
-    background: #fed486;
+  width: 15px;
+  height: 15px;
+  margin: 280px 0 0 -120px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #fed486;
+  background: #fed486;
 }
 
+/* line 91, ../sass/app.scss */
 .star-5 {
-    width: 17px;
-    height: 17px;
-    margin: 300px 0 0 480px;
-    border-radius: 50%;
-    box-shadow: 0 0 30px #ffa284;
-    background: #ffa284;
+  width: 17px;
+  height: 17px;
+  margin: 300px 0 0 480px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #ffa284;
+  background: #ffa284;
 }
 
+/* line 100, ../sass/app.scss */
 .star-6 {
-    width: 22px;
-    height: 22px;
-    margin: 290px 0 0 30px;
-    border-radius: 50%;
-    box-shadow: 0 0 30px #ff227b;
-    background: #ff227b;
+  width: 22px;
+  height: 22px;
+  margin: 290px 0 0 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #ff227b;
+  background: #ff227b;
 }
 
+/* line 109, ../sass/app.scss */
 .star-7 {
-    width: 11px;
-    height: 11px;
-    margin: 360px 0 0 240px;
-    border-radius: 50%;
-    box-shadow: 0 0 30px #ffa284;
-    background: #ffa284;
+  width: 11px;
+  height: 11px;
+  margin: 360px 0 0 240px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #ffa284;
+  background: #ffa284;
 }
 
+/* line 118, ../sass/app.scss */
 .star-8 {
-    width: 26px;
-    height: 26px;
-    margin: 320px 0 0 -320px;
-    border-radius: 50%;
-    box-shadow: 0 0 30px #736b99;
-    background: #736b99;
+  width: 26px;
+  height: 26px;
+  margin: 320px 0 0 -320px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #736b99;
+  background: #736b99;
 }
-
 
 /*流星*/
+/* line 129, ../sass/app.scss */
 #meteor {
-    width: 261px;
-    height: 205px;
-    /*margin: -380px 0 0 180px;*/
-    margin: 0;
-    top: -205px;
-    right: -261px;
-    left: auto;
-    background: url(../images/meteor.png) center center no-repeat;
-    -webkit-transform: translate(0, 0);
+  width: 261px;
+  height: 205px;
+  /*margin: -380px 0 0 180px;*/
+  margin: 0;
+  top: -205px;
+  right: -261px;
+  left: auto;
+  background: url(../images/meteor.png) center center no-repeat;
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
+/* line 141, ../sass/app.scss */
 #meteor.fly {
-    -webkit-animation: meteor-fly 5s infinite ease-in-out;
-    animation: meteor-fly 5s infinite ease-in-out
+  -moz-animation: meteor-fly 5s infinite ease-in-out;
+  -webkit-animation: meteor-fly 5s infinite ease-in-out;
+  animation: meteor-fly 5s infinite ease-in-out;
+  animation: meteor-fly 5s infinite ease-in-out;
 }
-
 
 /*星球*/
+/* line 148, ../sass/app.scss */
 #planet-top {
-    width: 288px;
-    height: 157px;
-    margin: -380px 0 0 -180px;
-    background: url(../images/planet-top.png) center center no-repeat;
+  width: 288px;
+  height: 157px;
+  margin: -380px 0 0 -180px;
+  background: url(../images/planet-top.png) center center no-repeat;
 }
 
+/* line 155, ../sass/app.scss */
 #planet-center {
-    width: 196px;
-    height: 196px;
-    margin: -60px 0 0 -10px;
-    background: url(../images/planet-center.png) center center no-repeat;
+  width: 196px;
+  height: 196px;
+  margin: -60px 0 0 -10px;
+  background: url(../images/planet-center.png) center center no-repeat;
 }
 
+/* line 162, ../sass/app.scss */
 #planet-bottom {
-    width: 284px;
-    height: 216px;
-    margin: 240px 0 0 -700px;
-    background: url(../images/planet-bottom.png) center center no-repeat;
+  width: 284px;
+  height: 216px;
+  margin: 240px 0 0 -700px;
+  background: url(../images/planet-bottom.png) center center no-repeat;
 }
 
+/* line 169, ../sass/app.scss */
 #planet-left {
-    width: 928px;
-    height: 928px;
-    margin: -720px 0 0 -1100px;
-    background: url(../images/planet-left.png) center center no-repeat;
+  width: 928px;
+  height: 928px;
+  margin: -720px 0 0 -1100px;
+  background: url(../images/planet-left.png) center center no-repeat;
 }
 
+/* line 176, ../sass/app.scss */
 #planet-right {
-    width: 568px;
-    height: 568px;
-    margin: -280px 0 0 350px;
-    background: url(../images/planet-right.png) center center no-repeat;
+  width: 568px;
+  height: 568px;
+  margin: -280px 0 0 350px;
+  background: url(../images/planet-right.png) center center no-repeat;
 }
-
 
 /*通道*/
+/* line 185, ../sass/app.scss */
 #bridge {
-    width: 1071px;
-    height: 518px;
-    margin: -159px 0 0 -536px;
-    background: url(../images/bridge.png) center center no-repeat;
+  width: 1071px;
+  height: 518px;
+  margin: -159px 0 0 -536px;
+  background: url(../images/bridge.png) center center no-repeat;
 }
 
-
+/* line 193, ../sass/app.scss */
 .ufo {
-    position: relative;
-    width: 184px;
-    height: 243px;
-    margin: -280px 0 0 -680px;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    -webkit-transform: translate(0, -5px);
+  position: relative;
+  width: 184px;
+  height: 243px;
+  margin: -280px 0 0 -680px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -moz-transform: translate(0, -5px);
+  -ms-transform: translate(0, -5px);
+  -webkit-transform: translate(0, -5px);
+  transform: translate(0, -5px);
 }
 
+/* line 203, ../sass/app.scss */
 .ufo h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: normal;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
 }
 
+/* line 215, ../sass/app.scss */
 .ufo span {
-    position: relative;
-    display: inline-block;
-    padding: 0 20px;
-    background: #fff;
-    border-radius: 10px;
-    color: #333;
-    box-shadow: 0 0 4px rgba(0,0,0, 0.4);
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 10px;
+  color: #333;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
+/* line 225, ../sass/app.scss */
 .ufo span:before,
 .ufo span:after {
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 22px;
-    background: #fff;
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 22px;
+  background: #fff;
 }
 
+/* line 234, ../sass/app.scss */
 .ufo span:before {
-    left: 10px;
-    top: 100%;
-    -webkit-transform: rotate(-30deg);
-    -webkit-transform-origin: left top;
+  left: 10px;
+  top: 100%;
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  -moz-transform-origin: left top 50%;
+  -ms-transform-origin: left top 50%;
+  -webkit-transform-origin: left top 50%;
+  transform-origin: left top 50%;
 }
 
+/* line 241, ../sass/app.scss */
 .ufo span:after {
-    right: 10px;
-    top: 100%;
-    -webkit-transform: rotate(30deg);
-    -webkit-transform-origin: right top;
+  right: 10px;
+  top: 100%;
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -moz-transform-origin: right top 50%;
+  -ms-transform-origin: right top 50%;
+  -webkit-transform-origin: right top 50%;
+  transform-origin: right top 50%;
 }
 
+/* line 248, ../sass/app.scss */
 .steps {
-    -webkit-transform: translate(0, 0);
-    -webkit-transition: -webkit-transform 1s;
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -moz-transition: -webkit-transform 1s;
+  -o-transition: -webkit-transform 1s;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
 }
 
-
+/* line 254, ../sass/app.scss */
 .ufo-1 {
-    background-image: url(../images/UFO-1.png);
-    -webkit-animation: floating 2s .1s infinite ease-in-out;
-    animation: floating 2s .1s infinite ease-in-out
+  background-image: url(../images/UFO-1.png);
+  -moz-animation: floating 2s 0.1s infinite ease-in-out;
+  -webkit-animation: floating 2s 0.1s infinite ease-in-out;
+  animation: floating 2s 0.1s infinite ease-in-out;
+  animation: floating 2s 0.1s infinite ease-in-out;
 }
 
+/* line 260, ../sass/app.scss */
 .ufo-2 {
-    background-image: url(../images/UFO-2.png);
-    -webkit-animation: floating 2s .3s infinite ease-in-out;
-    animation: floating 2s .2s infinite ease-in-out
+  background-image: url(../images/UFO-2.png);
+  -moz-animation: floating 2s 0.3s infinite ease-in-out;
+  -webkit-animation: floating 2s 0.3s infinite ease-in-out;
+  animation: floating 2s 0.3s infinite ease-in-out;
+  animation: floating 2s 0.2s infinite ease-in-out;
 }
 
+/* line 266, ../sass/app.scss */
 .ufo-3 {
-    background-image: url(../images/UFO-3.png);
-    -webkit-animation: floating 2s .5s infinite ease-in-out;
-    animation: floating 2s .3s infinite ease-in-out
+  background-image: url(../images/UFO-3.png);
+  -moz-animation: floating 2s 0.5s infinite ease-in-out;
+  -webkit-animation: floating 2s 0.5s infinite ease-in-out;
+  animation: floating 2s 0.5s infinite ease-in-out;
+  animation: floating 2s 0.3s infinite ease-in-out;
 }
 
+/* line 272, ../sass/app.scss */
 .ufo-4 {
-    background-image: url(../images/UFO-4.png);
-    -webkit-animation: floating 2s .8s infinite ease-in-out;
-    animation: floating 2s .4s infinite ease-in-out
+  background-image: url(../images/UFO-4.png);
+  -moz-animation: floating 2s 0.8s infinite ease-in-out;
+  -webkit-animation: floating 2s 0.8s infinite ease-in-out;
+  animation: floating 2s 0.8s infinite ease-in-out;
+  animation: floating 2s 0.4s infinite ease-in-out;
 }
 
+/* line 278, ../sass/app.scss */
 .ufo-5 {
-    background-image: url(../images/UFO-5.png);
-    -webkit-animation: floating 2s 1.2s infinite ease-in-out;
-    animation: floating 2s .5s infinite ease-in-out
+  background-image: url(../images/UFO-5.png);
+  -moz-animation: floating 2s 1.2s infinite ease-in-out;
+  -webkit-animation: floating 2s 1.2s infinite ease-in-out;
+  animation: floating 2s 1.2s infinite ease-in-out;
+  animation: floating 2s 0.5s infinite ease-in-out;
 }
 
+/* line 284, ../sass/app.scss */
 .error-message {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    font-size: 50px;
-    color: #fff;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
 }
 
+/* line 293, ../sass/app.scss */
 .floating {
-    -webkit-animation: floating 2s 1.2s infinite ease-in-out;
-    animation: floating 2s .5s infinite ease-in-out
+  -moz-animation: floating 2s 1.2s infinite ease-in-out;
+  -webkit-animation: floating 2s 1.2s infinite ease-in-out;
+  animation: floating 2s 1.2s infinite ease-in-out;
+  animation: floating 2s 0.5s infinite ease-in-out;
 }
 
+/* line 298, ../sass/app.scss */
 .step-0 {
-    display: none;
+  display: none;
 }
 
+/* line 302, ../sass/app.scss */
 .step-1 {
-    -webkit-transform: translate(117px, 85px);
-    z-index: 3;
+  -moz-transform: translate(117px, 85px);
+  -ms-transform: translate(117px, 85px);
+  -webkit-transform: translate(117px, 85px);
+  transform: translate(117px, 85px);
+  z-index: 3;
 }
 
+/* line 307, ../sass/app.scss */
 .step-2 {
-    -webkit-transform: translate(184px, 130px);
-    z-index: 4;
+  -moz-transform: translate(184px, 130px);
+  -ms-transform: translate(184px, 130px);
+  -webkit-transform: translate(184px, 130px);
+  transform: translate(184px, 130px);
+  z-index: 4;
 }
 
+/* line 312, ../sass/app.scss */
 .step-3 {
-    -webkit-transform: translate(254px, 175px);
-    z-index: 5;
+  -moz-transform: translate(254px, 175px);
+  -ms-transform: translate(254px, 175px);
+  -webkit-transform: translate(254px, 175px);
+  transform: translate(254px, 175px);
+  z-index: 5;
 }
 
+/* line 317, ../sass/app.scss */
 .step-4 {
-    -webkit-transform: translate(321px, 219px);
-    z-index: 6;
+  -moz-transform: translate(321px, 219px);
+  -ms-transform: translate(321px, 219px);
+  -webkit-transform: translate(321px, 219px);
+  transform: translate(321px, 219px);
+  z-index: 6;
 }
 
+/* line 322, ../sass/app.scss */
 .step-5 {
-    -webkit-transform: translate(389px, 262px);
-    z-index: 7;
+  -moz-transform: translate(389px, 262px);
+  -ms-transform: translate(389px, 262px);
+  -webkit-transform: translate(389px, 262px);
+  transform: translate(389px, 262px);
+  z-index: 7;
 }
 
 /**/
+/* line 328, ../sass/app.scss */
 .step-6 {
-    -webkit-transform: translate(453px, 217px);
-    z-index: 6;
+  -moz-transform: translate(453px, 217px);
+  -ms-transform: translate(453px, 217px);
+  -webkit-transform: translate(453px, 217px);
+  transform: translate(453px, 217px);
+  z-index: 6;
 }
 
+/* line 333, ../sass/app.scss */
 .step-7 {
-    -webkit-transform: translate(520px, 175px);
-    z-index: 5;
+  -moz-transform: translate(520px, 175px);
+  -ms-transform: translate(520px, 175px);
+  -webkit-transform: translate(520px, 175px);
+  transform: translate(520px, 175px);
+  z-index: 5;
 }
 
+/* line 338, ../sass/app.scss */
 .step-8 {
-    -webkit-transform: translate(453px, 132px);
-    z-index: 4;
+  -moz-transform: translate(453px, 132px);
+  -ms-transform: translate(453px, 132px);
+  -webkit-transform: translate(453px, 132px);
+  transform: translate(453px, 132px);
+  z-index: 4;
 }
 
+/* line 343, ../sass/app.scss */
 .step-9 {
-    -webkit-transform: translate(386px, 87px);
-    z-index: 3;
+  -moz-transform: translate(386px, 87px);
+  -ms-transform: translate(386px, 87px);
+  -webkit-transform: translate(386px, 87px);
+  transform: translate(386px, 87px);
+  z-index: 3;
 }
 
+/* line 348, ../sass/app.scss */
 .step-10 {
-    -webkit-transform: translate(454px, 42px);
-    z-index: 2;
+  -moz-transform: translate(454px, 42px);
+  -ms-transform: translate(454px, 42px);
+  -webkit-transform: translate(454px, 42px);
+  transform: translate(454px, 42px);
+  z-index: 2;
 }
 
+/* line 353, ../sass/app.scss */
 .step-11 {
-    -webkit-transform: translate(520px, 0px);
-    z-index: 1;
+  -moz-transform: translate(520px, 0px);
+  -ms-transform: translate(520px, 0px);
+  -webkit-transform: translate(520px, 0px);
+  transform: translate(520px, 0px);
+  z-index: 1;
 }
 
+/* line 358, ../sass/app.scss */
 .step-12 {
-    -webkit-transform: translate(590px, -42px);
-    z-index: 0;
+  -moz-transform: translate(590px, -42px);
+  -ms-transform: translate(590px, -42px);
+  -webkit-transform: translate(590px, -42px);
+  transform: translate(590px, -42px);
+  z-index: 0;
 }
 
+/* line 363, ../sass/app.scss */
 .step-13 {
-    -webkit-transform: translate(654px, 0px);
-    z-index: 1;
+  -moz-transform: translate(654px, 0px);
+  -ms-transform: translate(654px, 0px);
+  -webkit-transform: translate(654px, 0px);
+  transform: translate(654px, 0px);
+  z-index: 1;
 }
 
+/* line 368, ../sass/app.scss */
 .step-14 {
-    -webkit-transform: translate(720px, 42px);
-    z-index: 2;
+  -moz-transform: translate(720px, 42px);
+  -ms-transform: translate(720px, 42px);
+  -webkit-transform: translate(720px, 42px);
+  transform: translate(720px, 42px);
+  z-index: 2;
 }
 
+/* line 373, ../sass/app.scss */
 .step-15 {
-    -webkit-transform: translate(789px, 86px);
-    z-index: 3;
+  -moz-transform: translate(789px, 86px);
+  -ms-transform: translate(789px, 86px);
+  -webkit-transform: translate(789px, 86px);
+  transform: translate(789px, 86px);
+  z-index: 3;
 }
 
+/* line 378, ../sass/app.scss */
 .step-16 {
-    -webkit-transform: translate(856px, 129px);
-    z-index: 4;
+  -moz-transform: translate(856px, 129px);
+  -ms-transform: translate(856px, 129px);
+  -webkit-transform: translate(856px, 129px);
+  transform: translate(856px, 129px);
+  z-index: 4;
 }
 
+/* line 383, ../sass/app.scss */
 .step-17 {
-    -webkit-transform: translate(789px, 174px);
-    z-index: 5;
+  -moz-transform: translate(789px, 174px);
+  -ms-transform: translate(789px, 174px);
+  -webkit-transform: translate(789px, 174px);
+  transform: translate(789px, 174px);
+  z-index: 5;
 }
 
+/* line 388, ../sass/app.scss */
 .step-18 {
-    -webkit-transform: translate(720px, 218px);
-    z-index: 6;
+  -moz-transform: translate(720px, 218px);
+  -ms-transform: translate(720px, 218px);
+  -webkit-transform: translate(720px, 218px);
+  transform: translate(720px, 218px);
+  z-index: 6;
 }
 
+/* line 393, ../sass/app.scss */
 .step-19 {
-    -webkit-transform: translate(654px, 261px);
-    z-index: 7;
+  -moz-transform: translate(654px, 261px);
+  -ms-transform: translate(654px, 261px);
+  -webkit-transform: translate(654px, 261px);
+  transform: translate(654px, 261px);
+  z-index: 7;
 }
 
+/* line 398, ../sass/app.scss */
 .step-20 {
-    -webkit-transform: translate(720px, 304px);
-    z-index: 8;
+  -moz-transform: translate(720px, 304px);
+  -ms-transform: translate(720px, 304px);
+  -webkit-transform: translate(720px, 304px);
+  transform: translate(720px, 304px);
+  z-index: 8;
 }
 
+/* line 403, ../sass/app.scss */
 .step-21 {
-    -webkit-transform: translate(789px, 347px);
-    z-index: 9;
+  -moz-transform: translate(789px, 347px);
+  -ms-transform: translate(789px, 347px);
+  -webkit-transform: translate(789px, 347px);
+  transform: translate(789px, 347px);
+  z-index: 9;
 }
 
+/* line 408, ../sass/app.scss */
 .step-22 {
-    -webkit-transform: translate(856px, 306px);
-    z-index: 8;
+  -moz-transform: translate(856px, 306px);
+  -ms-transform: translate(856px, 306px);
+  -webkit-transform: translate(856px, 306px);
+  transform: translate(856px, 306px);
+  z-index: 8;
 }
 
+/* line 413, ../sass/app.scss */
 .step-23 {
-    -webkit-transform: translate(923px, 261px);
-    z-index: 7;
+  -moz-transform: translate(923px, 261px);
+  -ms-transform: translate(923px, 261px);
+  -webkit-transform: translate(923px, 261px);
+  transform: translate(923px, 261px);
+  z-index: 7;
 }
 
+/* line 418, ../sass/app.scss */
 .step-24 {
-    -webkit-transform: translate(990px, 218px);
-    z-index: 6;
+  -moz-transform: translate(990px, 218px);
+  -ms-transform: translate(990px, 218px);
+  -webkit-transform: translate(990px, 218px);
+  transform: translate(990px, 218px);
+  z-index: 6;
 }
 
+/* line 423, ../sass/app.scss */
 .step-25 {
-    -webkit-transform: translate(1056px, 174px);
-    z-index: 5;
+  -moz-transform: translate(1056px, 174px);
+  -ms-transform: translate(1056px, 174px);
+  -webkit-transform: translate(1056px, 174px);
+  transform: translate(1056px, 174px);
+  z-index: 5;
 }
-
 
 /* =============
  progress page
 ============= */
+/* line 432, ../sass/app.scss */
 #progress {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-#progress .planet{
-    margin: 0;
-    left: auto;
-    top: auto;
+/* line 437, ../sass/app.scss */
+#progress .planet {
+  margin: 0;
+  left: auto;
+  top: auto;
 }
 
+/* line 443, ../sass/app.scss */
 #progress #planet-top {
-    left: 40%;
-    bottom: -70px;
+  left: 40%;
+  bottom: -70px;
 }
 
+/* line 448, ../sass/app.scss */
 #progress #planet-center {
-    right: 5%;
-    top: 10%;
+  right: 5%;
+  top: 10%;
 }
 
+/* line 453, ../sass/app.scss */
 #progress #planet-bottom {
-    left: -100px;
-    bottom: 20%;
+  left: -100px;
+  bottom: 20%;
 }
 
+/* line 458, ../sass/app.scss */
 #progress #planet-left {
-    left: -500px;
-    top: -500px;
+  left: -500px;
+  top: -500px;
 }
 
+/* line 463, ../sass/app.scss */
 #progress #planet-right {
-    right: -300px;
-    bottom: -200px;
+  right: -300px;
+  bottom: -200px;
 }
 
-
+/* line 469, ../sass/app.scss */
 #progress-cont {
-    position: absolute;
-    top: 0;
-    right: 100px;
-    bottom: 100px;
-    left: 100px;
-
-    /*background: #0c0;*/
+  position: absolute;
+  top: 0;
+  right: 100px;
+  bottom: 100px;
+  left: 100px;
+  /*background: #0c0;*/
 }
 
+/* line 479, ../sass/app.scss */
 #progress #header {
-    padding: 20px 0 100px 0;
-    text-align: center;
-    color: #fff;
+  padding: 20px 0 100px 0;
+  text-align: center;
+  color: #fff;
 }
 
+/* line 485, ../sass/app.scss */
 #progress #header .title {
-    display: inline-block;
-    margin-right: 30px;
-    font-size: 50px;
-    font-weight: 900;
-    font-family: 'Roboto';
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 50px;
+  font-weight: 900;
+  font-family: 'Roboto';
 }
 
+/* line 493, ../sass/app.scss */
 #progress #header .tasks {
-    display: inline-block;
-    font-size: 50px;
-    font-weight: 100;
-    color: #fff;
-    font-family: 'Roboto';
+  display: inline-block;
+  font-size: 50px;
+  font-weight: 100;
+  color: #fff;
+  font-family: 'Roboto';
 }
 
+/* line 501, ../sass/app.scss */
 #task-list {
-    width: 1200px;
-    margin: 0 auto;
-    font-size: 0;
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 0;
 }
 
+/* line 507, ../sass/app.scss */
 #task-list > li {
-    height: 160px;
+  height: 160px;
 }
 
-#task-list > li > .task-title{
-    float: left;
-    display: table;
-    width: 740px;
-    height: 82px;
-    padding: 10px 20px;
-    margin-right: 20px;
-    border-radius: 30px;
-    background: #41436d;
-    font-size: 16px;
-    color: #fff;
-    box-sizing: border-box;
+/* line 511, ../sass/app.scss */
+#task-list > li > .task-title {
+  float: left;
+  display: table;
+  width: 740px;
+  height: 82px;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border-radius: 30px;
+  background: #41436d;
+  font-size: 16px;
+  color: #fff;
+  box-sizing: border-box;
 }
 
+/* line 525, ../sass/app.scss */
 #task-list > li > .task-title span {
-    display: table-cell;
-    vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
 }
 
+/* line 530, ../sass/app.scss */
 #task-list > li:nth-child(1) > .task-title {
-    border: 5px solid #ff217b;
-    box-shadow: 0 0 10px 2px rgba(255, 33, 123, 0.7);
+  border: 5px solid #ff217b;
+  box-shadow: 0 0 10px 2px rgba(255, 33, 123, 0.7);
 }
 
 /*#task-list > li:nth-child(1) */
-
+/* line 537, ../sass/app.scss */
 #task-list > li:nth-child(2) > .task-title {
-    border: 5px solid #ffd687;
-    box-shadow: 0 0 10px 2px rgba(255, 214, 135, 0.7);
+  border: 5px solid #ffd687;
+  box-shadow: 0 0 10px 2px rgba(255, 214, 135, 0.7);
 }
 
+/* line 542, ../sass/app.scss */
 #task-list > li:nth-child(3) > .task-title {
-    border: 5px solid #e7ffab;
-    box-shadow: 0 0 10px 2px rgba(231, 255, 171, 0.7);
+  border: 5px solid #e7ffab;
+  box-shadow: 0 0 10px 2px rgba(231, 255, 171, 0.7);
 }
 
+/* line 547, ../sass/app.scss */
 #task-list > li:nth-child(4) > .task-title {
-    border: 5px solid #63ffc3;
-    box-shadow: 0 0 10px 2px rgba(99, 255, 195, 0.7);
+  border: 5px solid #63ffc3;
+  box-shadow: 0 0 10px 2px rgba(99, 255, 195, 0.7);
 }
 
+/* line 552, ../sass/app.scss */
 #task-list > li:nth-child(5) > .task-title {
-    border: 5px solid #bd8fbf;
-    box-shadow: 0 0 10px 2px rgba(189, 143, 191, 0.7);
+  border: 5px solid #bd8fbf;
+  box-shadow: 0 0 10px 2px rgba(189, 143, 191, 0.7);
 }
 
+/* line 557, ../sass/app.scss */
 #task-list > li > ul {
-    display: inline-block;
-    vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
 }
 
+/* line 562, ../sass/app.scss */
 #task-list > li > ul > li {
-    position: relative;
-    display: inline-block;
-    width: 128px;
-    height: 103px;
-    background: url(../images/UFO-mask.png) center bottom no-repeat;
-    vertical-align: top;
-    font-size: 14px;
-    color: #fff;
-    text-align: center;
+  position: relative;
+  display: inline-block;
+  width: 128px;
+  height: 103px;
+  background: url(../images/UFO-mask.png) center bottom no-repeat;
+  vertical-align: top;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
 }
 
+/* line 574, ../sass/app.scss */
 .member-name {
-    position: absolute;
-    left: 0;
-    bottom: -14px;
-    width: 100%;
-    font-weight: 300;
-    font-family: 'Roboto';
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+  width: 100%;
+  font-weight: 300;
+  font-family: 'Roboto';
 }
 
+/* line 583, ../sass/app.scss */
 .avatar-wrap {
-    display: inline-block;
-    position: absolute;
-    top: -14px;
-    left: 25px;
-    width: 76px;
-    height: 78px;
-    overflow: hidden;
-    border-radius: 35px 35px 17px 17px;
-    box-shadow: 0 -5px 5px rgba(255, 255, 255, .3), 5px 0 5px rgba(255, 255, 255, .3), 0 0 0 rgba(255, 255, 255, 0), -5px 0 5px rgba(255, 255, 255, .3);
+  display: inline-block;
+  position: absolute;
+  top: -14px;
+  left: 25px;
+  width: 76px;
+  height: 78px;
+  overflow: hidden;
+  border-radius: 35px 35px 17px 17px;
+  box-shadow: 0 -5px 5px rgba(255, 255, 255, 0.3), 5px 0 5px rgba(255, 255, 255, 0.3), 0 0 0 rgba(255, 255, 255, 0), -5px 0 5px rgba(255, 255, 255, 0.3);
 }
 
+/* line 595, ../sass/app.scss */
 .avatar {
-    display: inline-block;
-    width: 76px;
-    height: 100px;
-    background: center center no-repeat;
-    background-size: cover;
+  display: inline-block;
+  width: 76px;
+  height: 100px;
+  background: center center no-repeat;
+  background-size: cover;
 }
-
 
 @-webkit-keyframes floating {
-    from {
-        -webkit-transform: translate(0, -5px);
-    }
+  /* line 605, ../sass/app.scss */
+  from {
+    -moz-transform: translate(0, -5px);
+    -ms-transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px);
+    transform: translate(0, -5px);
+  }
 
-    65% {
-        -webkit-transform: translate(0, 5px);
-    }
+  /* line 609, ../sass/app.scss */
+  65% {
+    -moz-transform: translate(0, 5px);
+    -ms-transform: translate(0, 5px);
+    -webkit-transform: translate(0, 5px);
+    transform: translate(0, 5px);
+  }
 
-    to {
-        -webkit-transform: translate(0, -5px);
-    }
+  /* line 613, ../sass/app.scss */
+  to {
+    -moz-transform: translate(0, -5px);
+    -ms-transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px);
+    transform: translate(0, -5px);
+  }
 }
+@-moz-keyframes floating {
+  /* line 605, ../sass/app.scss */
+  from {
+    -moz-transform: translate(0, -5px);
+    -ms-transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px);
+    transform: translate(0, -5px);
+  }
 
+  /* line 609, ../sass/app.scss */
+  65% {
+    -moz-transform: translate(0, 5px);
+    -ms-transform: translate(0, 5px);
+    -webkit-transform: translate(0, 5px);
+    transform: translate(0, 5px);
+  }
+
+  /* line 613, ../sass/app.scss */
+  to {
+    -moz-transform: translate(0, -5px);
+    -ms-transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px);
+    transform: translate(0, -5px);
+  }
+}
+@keyframes floating {
+  /* line 605, ../sass/app.scss */
+  from {
+    -moz-transform: translate(0, -5px);
+    -ms-transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px);
+    transform: translate(0, -5px);
+  }
+
+  /* line 609, ../sass/app.scss */
+  65% {
+    -moz-transform: translate(0, 5px);
+    -ms-transform: translate(0, 5px);
+    -webkit-transform: translate(0, 5px);
+    transform: translate(0, 5px);
+  }
+
+  /* line 613, ../sass/app.scss */
+  to {
+    -moz-transform: translate(0, -5px);
+    -ms-transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px);
+    transform: translate(0, -5px);
+  }
+}
 @-webkit-keyframes meteor-fly {
-    from {
-        -webkit-transform: translate(0, 0);
-    }
+  /* line 619, ../sass/app.scss */
+  from {
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
 
-    to {
-        -webkit-transform: translate(-2500px, 1500px);
-    }
+  /* line 623, ../sass/app.scss */
+  to {
+    -moz-transform: translate(-2500px, 1500px);
+    -ms-transform: translate(-2500px, 1500px);
+    -webkit-transform: translate(-2500px, 1500px);
+    transform: translate(-2500px, 1500px);
+  }
+}
+@-moz-keyframes meteor-fly {
+  /* line 619, ../sass/app.scss */
+  from {
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  /* line 623, ../sass/app.scss */
+  to {
+    -moz-transform: translate(-2500px, 1500px);
+    -ms-transform: translate(-2500px, 1500px);
+    -webkit-transform: translate(-2500px, 1500px);
+    transform: translate(-2500px, 1500px);
+  }
+}
+@keyframes meteor-fly {
+  /* line 619, ../sass/app.scss */
+  from {
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  /* line 623, ../sass/app.scss */
+  to {
+    -moz-transform: translate(-2500px, 1500px);
+    -ms-transform: translate(-2500px, 1500px);
+    -webkit-transform: translate(-2500px, 1500px);
+    transform: translate(-2500px, 1500px);
+  }
 }

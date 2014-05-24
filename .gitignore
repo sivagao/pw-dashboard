@@ -1,2 +1,4 @@
 backend/env
 backend/admin/fixture
+app/.sass-cache
+*.css
