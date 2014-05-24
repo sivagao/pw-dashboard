@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+
 # Django settings for backend project.
 
 DEBUG = True
@@ -145,6 +147,10 @@ REST_FRAMEWORK = {
     )
 }
 CORS_ORIGIN_ALLOW_ALL = True
+
+SUIT_CONFIG = {
+    'ADMIN_NAME': u'豌豆荚 PolishWeek S07 Admin'
+}
 
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 

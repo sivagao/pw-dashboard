@@ -17,12 +17,18 @@ class Task(models.Model):
 
 
     object = models.Manager()
+    objects = models.Manager()
     # objects = FinishedTaskManager()
     # allTask = models.Manager() # The default manager.
     finishedTask = FinishedTaskManager()
 
     def __unicode__(self):
         return self.name
+
+    def clean(self):
+        # trans format of assignee
+        print 'going to fix'
+        self.assignee = self.assignee.replace('、',',').replace(u'，',',')
 
 class Team(models.Model):
     name = models.CharField(max_length=255, help_text=u'Polish Weeek 小组名称', verbose_name=u'小组名称')

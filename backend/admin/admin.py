@@ -7,6 +7,7 @@ from .utils import *
 class TaskAdmin(admin.ModelAdmin):
     list_display = ('name', 'assignee', 'finished', 'finishedTime', 'admin_assignee_avatars')
     list_editable = ('finished',)
+    search_fields = ['name', 'assignee',]
 
     """ List extensions """
     def admin_assignee_avatars(self, obj):
