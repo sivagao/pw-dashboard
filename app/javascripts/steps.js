@@ -27,6 +27,7 @@ $(function() {
                     }).addClass('step-' + data.results[index].progress);
                 }
                 $('.steps').show();
+                $('.step-0').hide();
                 $('.error-message').hide();
             },
             error: function(error) {
