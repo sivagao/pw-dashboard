@@ -11,6 +11,7 @@ $(function() {
 
     var ufoList = $('.ufo');
     var testNum;
+    $('<div class="error-message" style="display: none">出错了 (>_<) </div>').appendTo('body').hide();
 
     function getNewData() {
         $.ajax({
@@ -25,10 +26,12 @@ $(function() {
                         return (css.match(/\bstep-\S+/g) || []).join(' ');
                     }).addClass('step-' + data.results[index].progress);
                 }
+                $('.steps').show();
+                $('.error-message').hide();
             },
             error: function(error) {
                 $('.steps').hide();
-                $('body').append('<div class="error-message">出错了 (>_<) </div>');
+                $('.error-message').show();
             }
         });
     }

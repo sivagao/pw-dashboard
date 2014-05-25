@@ -8,32 +8,33 @@
  */
 
 
-$(function () {
+$(function() {
 
     var limitNum = 5;
-    var dataSize;
+    var isFirst = true;
     var apiURL = 'http://192.168.100.47:4000/tasks/';
     var taskTpl = _.template($('#task-list-tpl').html());
     var taskList = $('#progress-cont');
     var noData = $('#no-data');
 
     getNewData();
-
-    if (dataSize > 0) {
-        setInterval(getNewData, 5000);
-    }
+    setInterval(getNewData, 5000);
 
     function getNewData() {
         $.ajax({
             type: 'GET',
             dataType: 'json',
             url: apiURL,
-            success: function (res) {
-                dataSize = res.size = res.data.length;
+            success: function(res) {
+                res.size = res.data.length;
+                if ((res.size === 0) && !isFirst) {
+                    return;
+                }
                 res.data = _.last(_.shuffle(res.data), limitNum);
+                isFirst = false;
                 taskList.html(renderTaskList(res));
             },
-            error: function (error) {
+            error: function(error) {
                 taskList.append('<div class="error-message">出错了 (>_<) </div>');
             }
         });
