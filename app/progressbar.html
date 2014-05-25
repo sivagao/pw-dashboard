@@ -24,25 +24,53 @@
             <div class="title">Polish Week - Mission Completed</div>
             <div class="tasks"><%= finished %> / <%= total %></div>
         </div>
-        <ol id="task-list">
-        <% _.each(tasks, function(task) { %>
-            <li>
-                <div class="task-title">
-                    <span><%= task.name %><span>
-                </div>
-                <ul>
-                <% _.each(task.members, function(member) { %>
+        <% if (tasks.length > 0 ) { %>
+            <ol id="task-list">
+                <% _.each(tasks, function(task) { %>
                     <li>
-                        <h4 class="member-name"><%= member.name %></h4>
-                        <div class="avatar-wrap">
-                            <span class="avatar" style="background-image:url(<%= member.avatar %>)"></span>
+                        <div class="task-title">
+                            <span><%= task.name %><span>
                         </div>
+                        <ul>
+                        <% _.each(task.members, function(member) { %>
+                            <li>
+                                <h4 class="member-name"><%= member.name %></h4>
+                                <div class="avatar-wrap">
+                                    <span class="avatar" style="background-image:url(<%= member.avatar %>)"></span>
+                                </div>
+                            </li>
+                        <% }); %>
+                        </ul>
                     </li>
-                <% }); %>
-                </ul>
-            </li>
-        <% }); %>
-        </ol>
+                <% }) %>
+            </ol>
+        <% } else { %>
+            <div id="no-data">
+                <h2 class="rw-sentence">
+                    <span>Real poetry is like</span>
+                    <br />
+                    <span>creating</span>
+                    <div class="rw-words rw-words-1">
+                        <span>breathtaking moments</span>
+                        <span>lovely sounds</span>
+                        <span>incredible magic</span>
+                        <span>unseen experiences</span>
+                        <span>happy feelings</span>
+                        <span>beautiful butterflies</span>
+                    </div>
+                    <br />
+                    <span>with a silent touch of</span>
+                    <div class="rw-words rw-words-2">
+                        <span>sugar</span>
+                        <span>spice</span>
+                        <span>colors</span>
+                        <span>happiness</span>
+                        <span>wonder</span>
+                        <span>happiness</span>
+                    </div>
+                </h2>
+            </div>
+        <% } %>
     </script>
 
     <script src="javascripts/jquery.min.js"></script>
