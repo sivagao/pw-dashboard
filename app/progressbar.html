@@ -20,43 +20,16 @@
             <span></span>
         </div>
 
-        <div id="progress-cont"></div>
-
-    </div>
-
-
-    <script type="text/template" id="task-list-tpl">
-        <div id="header">
-            <div class="title">Polish Week - Mission Completed</div>
-            <div class="tasks"><%= finished %> / <%= total %></div>
-        </div>
-        <% if (tasks.length > 0 ) { %>
-            <ol id="task-list">
-                <% _.each(tasks, function(task) { %>
-                    <li>
-                        <div class="task-title">
-                            <span><%= task.name %><span>
-                        </div>
-                        <ul>
-                        <% _.each(task.members, function(member) { %>
-                            <li>
-                                <h4 class="member-name"><%= member.name %></h4>
-                                <div class="avatar-wrap">
-                                    <span class="avatar" style="background-image:url(<%= member.avatar %>)"></span>
-                                </div>
-                            </li>
-                        <% }); %>
-                        </ul>
-                    </li>
-                <% }) %>
-            </ol>
-        <% } else { %>
+        <div id="progress-cont">
+            <div id="header">
+                <div class="title">Polish Week - Mission Completed</div>
+            </div>
             <div id="no-data">
                 <div class="rw-sentence-wrap">
                     <div class="rw-sentence">
                         <h2>Polish Week S07 is coming</h2>
                         <div class="rw-words rw-words-1">
-                            <span>曾经一个对齐问题让你如鲠在喉，</span>
+                            <span class="active">曾经一个对齐问题让你如鲠在喉，</span>
                             <span>一个文案错误让你痛苦不堪，</span>
                             <span>一个错误提示的缺失让你无法入眠，</span>
                             <span>一个 corner case 被忽略让你久久难以忘怀...</span>
@@ -65,7 +38,34 @@
                     </div>
                 </div>
             </div>
-        <% } %>
+        </div>
+    </div>
+
+
+    <script type="text/template" id="task-list-tpl">
+        <div id="header">
+            <div class="title">Polish Week - Mission Completed</div>
+            <div class="tasks"><%= finished %> / <%= total %></div>
+        </div>
+        <ol id="task-list">
+            <% _.each(tasks, function(task) { %>
+                <li>
+                    <div class="task-title">
+                        <span><%= task.name %><span>
+                    </div>
+                    <ul>
+                    <% _.each(task.members, function(member) { %>
+                        <li>
+                            <h4 class="member-name"><%= member.name %></h4>
+                            <div class="avatar-wrap">
+                                <span class="avatar" style="background-image:url(<%= member.avatar %>)"></span>
+                            </div>
+                        </li>
+                    <% }); %>
+                    </ul>
+                </li>
+            <% }) %>
+        </ol>
     </script>
 
     <script src="javascripts/jquery.min.js"></script>

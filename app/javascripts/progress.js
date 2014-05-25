@@ -4,37 +4,58 @@
  * @Author: hanjiyun
  * @Date:   2014-05-20 13:09:33
  * @Last Modified by:   hanjiyun
- * @Last Modified time: 2014-05-25 20:08:56
+ * @Last Modified time: 2014-05-26 02:14:57
  */
 
 
-$(function() {
+$(function () {
 
     var limitNum = 5;
     var isFirst = true;
+    var textTimer;
     var apiURL = 'http://192.168.100.47:4000/tasks/';
     var taskTpl = _.template($('#task-list-tpl').html());
     var taskList = $('#progress-cont');
-    var noData = $('#no-data');
 
     getNewData();
     setInterval(getNewData, 5000);
+
+    function textAnimate() {
+        var idx = 0;
+        var _spanLen = $('.rw-sentence span').hide().length;
+        textTimer = setInterval(function () {
+            $('.rw-sentence span:visible').fadeOut('fast');
+            $('.rw-sentence span').eq(idx % _spanLen).fadeIn({
+                delay: 200,
+                duration: 600
+            });
+            idx += 1;
+        }, 3500);
+    }
 
     function getNewData() {
         $.ajax({
             type: 'GET',
             dataType: 'json',
             url: apiURL,
-            success: function(res) {
+            success: function (res) {
                 res.size = res.data.length;
-                if ((res.size === 0) && !isFirst) {
+                if (res.size === 0 && isFirst) {
+                    $('#no-data').show();
+                    textAnimate();
+                    isFirst = false;
                     return;
                 }
+
+                if (res.size === 0 && !isFirst) {
+                    return;
+                }
+
                 res.data = _.last(_.shuffle(res.data), limitNum);
-                isFirst = false;
+                window.clearInterval(textTimer);
                 taskList.html(renderTaskList(res));
             },
-            error: function(error) {
+            error: function (error) {
                 taskList.append('<div class="error-message">出错了 (>_<) </div>');
             }
         });
