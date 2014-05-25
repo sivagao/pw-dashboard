@@ -512,9 +512,10 @@ body {
     height: 82px;
     padding: 10px 20px;
     margin-right: 20px;
+    margin-top: -16px;
     border-radius: 30px;
     background: #41436d;
-    font-size: 16px;
+    font-size: 20px;
     color: #fff;
     box-sizing: border-box;
 }
@@ -595,6 +596,8 @@ body {
     height: 100px;
     background: center center no-repeat;
     background-size: cover;
+    // overflow: hidden;
+    border-radius: 35px 35px 17px 17px;
 }
 
 
