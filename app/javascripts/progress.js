@@ -19,6 +19,7 @@ $(function () {
 
     getNewData();
     setInterval(getNewData, 5000);
+    taskList.append('<div class="error-message" style="display: none">出错了 (>_<) </div>');
 
     function textAnimate() {
         var idx = 0;
@@ -40,6 +41,7 @@ $(function () {
             url: apiURL,
             success: function (res) {
                 res.size = res.data.length;
+                $('.error-message').hide();
                 if (res.size === 0 && isFirst) {
                     $('#no-data').show();
                     textAnimate();
@@ -56,7 +58,7 @@ $(function () {
                 taskList.html(renderTaskList(res));
             },
             error: function (error) {
-                taskList.append('<div class="error-message">出错了 (>_<) </div>');
+                $('.error-message').show();
             }
         });
     }
