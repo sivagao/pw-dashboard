@@ -27,8 +27,8 @@ class Task(models.Model):
 
     def clean(self):
         # trans format of assignee
-        print 'going to fix'
-        self.assignee = self.assignee.replace('、',',').replace(u'，',',')
+        print 'fixfix'
+        self.assignee = self.assignee.replace(u'、',',').replace(u'，',',')
 
 class Team(models.Model):
     name = models.CharField(max_length=255, help_text=u'Polish Weeek 小组名称', verbose_name=u'小组名称')

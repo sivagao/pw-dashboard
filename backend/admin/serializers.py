@@ -20,7 +20,15 @@ class TaskSerializer(serializers.ModelSerializer):
         model = Task
         # fields = ('name', 'assignee', 'finished', 'finishedTime', 'assignee_avatars')
     # total = serializers.SerializerMethodField('get_total')
+    assignee = serializers.SerializerMethodField('fix_assignee')
     assignee_avatars = serializers.SerializerMethodField('get_assignee_avatars')
+    name = serializers.SerializerMethodField('fix_name')
+    def fix_name(self, obj):
+        if len(obj.name) > 80:
+            return obj.name[0:80]+u'...'
+        return obj.name
+    def fix_assignee(self, obj):
+        return ','.join(obj.assignee.split(',')[0:3])
     def get_total(self, obj):
         return Task.objects.count()
     def get_assignee_avatars(self, obj):
