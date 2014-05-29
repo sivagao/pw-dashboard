@@ -424,7 +424,7 @@ body {
   -ms-transform: translate(117px, 85px);
   -webkit-transform: translate(117px, 85px);
   transform: translate(117px, 85px);
-  z-index: 3;
+  z-index: 6;
 }
 
 /* line 379, ../sass/app.scss */
@@ -433,7 +433,7 @@ body {
   -ms-transform: translate(184px, 130px);
   -webkit-transform: translate(184px, 130px);
   transform: translate(184px, 130px);
-  z-index: 4;
+  z-index: 8;
 }
 
 /* line 384, ../sass/app.scss */
@@ -442,7 +442,7 @@ body {
   -ms-transform: translate(254px, 175px);
   -webkit-transform: translate(254px, 175px);
   transform: translate(254px, 175px);
-  z-index: 5;
+  z-index: 10;
 }
 
 /* line 389, ../sass/app.scss */
@@ -451,7 +451,7 @@ body {
   -ms-transform: translate(321px, 219px);
   -webkit-transform: translate(321px, 219px);
   transform: translate(321px, 219px);
-  z-index: 6;
+  z-index: 12;
 }
 
 /* line 394, ../sass/app.scss */
@@ -460,7 +460,7 @@ body {
   -ms-transform: translate(389px, 262px);
   -webkit-transform: translate(389px, 262px);
   transform: translate(389px, 262px);
-  z-index: 7;
+  z-index: 14;
 }
 
 /**/
@@ -470,7 +470,7 @@ body {
   -ms-transform: translate(453px, 217px);
   -webkit-transform: translate(453px, 217px);
   transform: translate(453px, 217px);
-  z-index: 6;
+  z-index: 12;
 }
 
 /* line 405, ../sass/app.scss */
@@ -479,7 +479,7 @@ body {
   -ms-transform: translate(520px, 175px);
   -webkit-transform: translate(520px, 175px);
   transform: translate(520px, 175px);
-  z-index: 5;
+  z-index: 10;
 }
 
 /* line 410, ../sass/app.scss */
@@ -488,7 +488,7 @@ body {
   -ms-transform: translate(453px, 132px);
   -webkit-transform: translate(453px, 132px);
   transform: translate(453px, 132px);
-  z-index: 4;
+  z-index: 8;
 }
 
 /* line 415, ../sass/app.scss */
@@ -497,7 +497,7 @@ body {
   -ms-transform: translate(386px, 87px);
   -webkit-transform: translate(386px, 87px);
   transform: translate(386px, 87px);
-  z-index: 3;
+  z-index: 6;
 }
 
 /* line 420, ../sass/app.scss */
@@ -506,7 +506,7 @@ body {
   -ms-transform: translate(454px, 42px);
   -webkit-transform: translate(454px, 42px);
   transform: translate(454px, 42px);
-  z-index: 2;
+  z-index: 4;
 }
 
 /* line 425, ../sass/app.scss */
@@ -515,7 +515,7 @@ body {
   -ms-transform: translate(520px, 0px);
   -webkit-transform: translate(520px, 0px);
   transform: translate(520px, 0px);
-  z-index: 1;
+  z-index: 2;
 }
 
 /* line 430, ../sass/app.scss */
@@ -533,7 +533,7 @@ body {
   -ms-transform: translate(654px, 0px);
   -webkit-transform: translate(654px, 0px);
   transform: translate(654px, 0px);
-  z-index: 1;
+  z-index: 2;
 }
 
 /* line 440, ../sass/app.scss */
@@ -542,7 +542,7 @@ body {
   -ms-transform: translate(720px, 42px);
   -webkit-transform: translate(720px, 42px);
   transform: translate(720px, 42px);
-  z-index: 2;
+  z-index: 4;
 }
 
 /* line 445, ../sass/app.scss */
@@ -551,7 +551,7 @@ body {
   -ms-transform: translate(789px, 86px);
   -webkit-transform: translate(789px, 86px);
   transform: translate(789px, 86px);
-  z-index: 3;
+  z-index: 6;
 }
 
 /* line 450, ../sass/app.scss */
@@ -560,7 +560,7 @@ body {
   -ms-transform: translate(856px, 129px);
   -webkit-transform: translate(856px, 129px);
   transform: translate(856px, 129px);
-  z-index: 4;
+  z-index: 8;
 }
 
 /* line 455, ../sass/app.scss */
@@ -569,7 +569,7 @@ body {
   -ms-transform: translate(789px, 174px);
   -webkit-transform: translate(789px, 174px);
   transform: translate(789px, 174px);
-  z-index: 5;
+  z-index: 10;
 }
 
 /* line 460, ../sass/app.scss */
@@ -578,7 +578,7 @@ body {
   -ms-transform: translate(720px, 218px);
   -webkit-transform: translate(720px, 218px);
   transform: translate(720px, 218px);
-  z-index: 6;
+  z-index: 12;
 }
 
 /* line 465, ../sass/app.scss */
@@ -587,7 +587,7 @@ body {
   -ms-transform: translate(654px, 261px);
   -webkit-transform: translate(654px, 261px);
   transform: translate(654px, 261px);
-  z-index: 7;
+  z-index: 14;
 }
 
 /* line 470, ../sass/app.scss */
@@ -596,7 +596,7 @@ body {
   -ms-transform: translate(720px, 304px);
   -webkit-transform: translate(720px, 304px);
   transform: translate(720px, 304px);
-  z-index: 8;
+  z-index: 16;
 }
 
 /* line 475, ../sass/app.scss */
@@ -605,7 +605,7 @@ body {
   -ms-transform: translate(789px, 347px);
   -webkit-transform: translate(789px, 347px);
   transform: translate(789px, 347px);
-  z-index: 9;
+  z-index: 18;
 }
 
 /* line 480, ../sass/app.scss */
@@ -614,7 +614,7 @@ body {
   -ms-transform: translate(856px, 306px);
   -webkit-transform: translate(856px, 306px);
   transform: translate(856px, 306px);
-  z-index: 8;
+  z-index: 16;
 }
 
 /* line 485, ../sass/app.scss */
@@ -623,7 +623,7 @@ body {
   -ms-transform: translate(923px, 261px);
   -webkit-transform: translate(923px, 261px);
   transform: translate(923px, 261px);
-  z-index: 7;
+  z-index: 14;
 }
 
 /* line 490, ../sass/app.scss */
@@ -632,7 +632,7 @@ body {
   -ms-transform: translate(990px, 218px);
   -webkit-transform: translate(990px, 218px);
   transform: translate(990px, 218px);
-  z-index: 6;
+  z-index: 12;
 }
 
 /* line 495, ../sass/app.scss */
@@ -641,7 +641,7 @@ body {
   -ms-transform: translate(1056px, 174px);
   -webkit-transform: translate(1056px, 174px);
   transform: translate(1056px, 174px);
-  z-index: 5;
+  z-index: 10;
 }
 
 /*

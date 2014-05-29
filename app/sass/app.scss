@@ -373,58 +373,58 @@ body {
 
 .step-1 {
     @include transform(translate(117px, 85px));
-    z-index: 3;
+    z-index: 6;
 }
 
 .step-2 {
     @include transform(translate(184px, 130px));
-    z-index: 4;
+    z-index: 8;
 }
 
 .step-3 {
     @include transform(translate(254px, 175px));
-    z-index: 5;
+    z-index: 10;
 }
 
 .step-4 {
     @include transform(translate(321px, 219px));
-    z-index: 6;
+    z-index: 12;
 }
 
 .step-5 {
     @include transform(translate(389px, 262px));
-    z-index: 7;
+    z-index: 14;
 }
 
 /**/
 .step-6 {
     @include transform(translate(453px, 217px));
-    z-index: 6;
+    z-index: 12;
 }
 
 .step-7 {
     @include transform(translate(520px, 175px));
-    z-index: 5;
+    z-index: 10;
 }
 
 .step-8 {
     @include transform(translate(453px, 132px));
-    z-index: 4;
+    z-index: 8;
 }
 
 .step-9 {
     @include transform(translate(386px, 87px));
-    z-index: 3;
+    z-index: 6;
 }
 
 .step-10 {
     @include transform(translate(454px, 42px));
-    z-index: 2;
+    z-index: 4;
 }
 
 .step-11 {
     @include transform(translate(520px, 0px));
-    z-index: 1;
+    z-index: 2;
 }
 
 .step-12 {
@@ -434,67 +434,67 @@ body {
 
 .step-13 {
     @include transform(translate(654px, 0px));
-    z-index: 1;
+    z-index: 2;
 }
 
 .step-14 {
     @include transform(translate(720px, 42px));
-    z-index: 2;
+    z-index: 4;
 }
 
 .step-15 {
     @include transform(translate(789px, 86px));
-    z-index: 3;
+    z-index: 6;
 }
 
 .step-16 {
     @include transform(translate(856px, 129px));
-    z-index: 4;
+    z-index: 8;
 }
 
 .step-17 {
     @include transform(translate(789px, 174px));
-    z-index: 5;
+    z-index: 10;
 }
 
 .step-18 {
     @include transform(translate(720px, 218px));
-    z-index: 6;
+    z-index: 12;
 }
 
 .step-19 {
     @include transform(translate(654px, 261px));
-    z-index: 7;
+    z-index: 14;
 }
 
 .step-20 {
     @include transform(translate(720px, 304px));
-    z-index: 8;
+    z-index: 16;
 }
 
 .step-21 {
     @include transform(translate(789px, 347px));
-    z-index: 9;
+    z-index: 18;
 }
 
 .step-22 {
     @include transform(translate(856px, 306px));
-    z-index: 8;
+    z-index: 16;
 }
 
 .step-23 {
     @include transform(translate(923px, 261px));
-    z-index: 7;
+    z-index: 14;
 }
 
 .step-24 {
     @include transform(translate(990px, 218px));
-    z-index: 6;
+    z-index: 12;
 }
 
 .step-25 {
     @include transform(translate(1056px, 174px));
-    z-index: 5;
+    z-index: 10;
 }
 
 

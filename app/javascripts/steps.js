@@ -19,13 +19,18 @@ $(function() {
             dataType: 'json',
             url: 'http://192.168.100.47:4000/teams/',
             success: function(data) {
-
+                $('.steps').css('z-index', 'none');
                 for (var index = 0, len = data.results.length; index < len; index++) {
                     var select = index + 1;
                     $('.ufo-' + select).parent('.steps').removeClass(function(index, css) {
                         return (css.match(/\bstep-\S+/g) || []).join(' ');
                     }).addClass('step-' + data.results[index].progress);
                 }
+                _.each(_.countBy(_.pluck(data.results, 'progress')), function(val, key) {
+                    if (val > 1) {
+                        $('.step-' + key).eq(_.random(0, val)).css('z-index', key * 2 + 1);
+                    }
+                });
                 $('.steps').show();
                 $('.step-0').hide();
                 $('.error-message').hide();
